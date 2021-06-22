@@ -1,4 +1,6 @@
 # RotateImageView
+## Version
+[![](https://jitpack.io/v/NeWolf/WolfAnimDemo.svg)](https://jitpack.io/#NeWolf/WolfAnimDemo)
 ## Use:
 
 1,Add it in your root build.gradle at the end of repositories:

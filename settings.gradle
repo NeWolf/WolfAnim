@@ -1,2 +1,3 @@
+include ':WolfAnim'
 rootProject.name = "WolfAnimDemo"
 include ':app'

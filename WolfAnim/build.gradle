@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
 }
 
@@ -8,13 +8,13 @@ android {
     buildToolsVersion configs.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.ewolf.wolfanimdemo"
         minSdkVersion configs.minSdkVersion
         targetSdkVersion configs.targetSdkVersion
         versionCode configs.versionCode
         versionName configs.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -39,16 +39,7 @@ android {
 }
 
 dependencies {
-
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation deps.kotlin
-    implementation deps.coreKtx
     implementation deps.androidx
-    implementation deps.material
-    implementation deps.constraintlayout
-    implementation project(path: ':WolfAnim')
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-    implementation 'com.github.NeWolf:BaseRecycleViewAdapterHelper:V1.0.0'
 }

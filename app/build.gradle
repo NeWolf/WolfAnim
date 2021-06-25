@@ -8,7 +8,7 @@ android {
     buildToolsVersion configs.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.ewolf.wolfanimdemo"
+        applicationId "com.ewolf.wolfanim"
         minSdkVersion configs.minSdkVersion
         targetSdkVersion configs.targetSdkVersion
         versionCode configs.versionCode
@@ -31,10 +31,47 @@ android {
         jvmTarget = '1.8'
     }
 
-    // 打包源码jar
-    task sourcesJar(type: Jar) {
-        from android.sourceSets.main.java.srcDirs
-        archiveClassifier = 'sources'
+    android {
+        packagingOptions {
+            exclude 'META-INF/proguard/androidx-annotations.pro'
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file('WatchInputRelease.keystore')
+            keyAlias 'WatchInputRelease'
+            keyPassword 'NeWolf'
+            storePassword 'NeWolf'
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+        debug {
+            storeFile file('debug.keystore')
+            keyAlias 'debug'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            debuggable false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            multiDexEnabled false
+            multiDexKeepProguard file('multidex-config.pro')
+            applicationIdSuffix configs.applicationId
+            versionNameSuffix configs.versionName
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
     }
 }
 
@@ -45,7 +82,7 @@ dependencies {
     implementation deps.androidx
     implementation deps.material
     implementation deps.constraintlayout
-    implementation project(path: ':WolfAnim')
+    implementation project(path: ':WolfAnimLib')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

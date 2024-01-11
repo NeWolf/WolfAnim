@@ -40,6 +40,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation deps.kotlin
-    implementation deps.androidx
+    provided deps.kotlin
+    provided deps.androidx
 }

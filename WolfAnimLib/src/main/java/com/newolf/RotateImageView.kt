@@ -29,7 +29,7 @@ class RotateImageView @JvmOverloads constructor(
     companion object {
         const val TAG = "RotateImageView"
         const val PROPERTY_NAME_ROTATE = "rotation"
-        const val DURATION = 99L
+        var sDuration = 99L
         const val REPEAT_COUNT = -1
     }
 
@@ -39,7 +39,7 @@ class RotateImageView @JvmOverloads constructor(
 
 
     init {
-        rotateAnim.duration = DURATION
+        rotateAnim.duration = sDuration
         rotateAnim.repeatCount = REPEAT_COUNT
         setImageResource(defaultImg)
     }
@@ -82,6 +82,17 @@ class RotateImageView @JvmOverloads constructor(
      */
     fun disableLog(): RotateImageView {
         isLogEnable = false
+        return this
+    }
+
+    /**
+     * 更新动画时长，可以调节旋转的快慢
+     */
+    fun updateDuration(duration: Int): RotateImageView {
+        sDuration = duration
+        stop()
+        rotateAnim.duration = sDuration
+        start()
         return this
     }
 

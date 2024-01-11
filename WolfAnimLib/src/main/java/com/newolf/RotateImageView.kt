@@ -29,7 +29,7 @@ class RotateImageView @JvmOverloads constructor(
     companion object {
         const val TAG = "RotateImageView"
         const val PROPERTY_NAME_ROTATE = "rotation"
-        var sDuration = 99L
+        var sDuration: Long = 99L
         const val REPEAT_COUNT = -1
     }
 
@@ -88,7 +88,7 @@ class RotateImageView @JvmOverloads constructor(
     /**
      * 更新动画时长，可以调节旋转的快慢
      */
-    fun updateDuration(duration: Int): RotateImageView {
+    fun updateDuration(duration: Long): RotateImageView {
         sDuration = duration
         stop()
         rotateAnim.duration = sDuration

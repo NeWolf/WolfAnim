@@ -1,4 +1,4 @@
-package com.ewolf.wolfanim
+package com.ewolf.wolfanimdemo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.ewolf.wolfanim.test", appContext.packageName)
+        assertEquals("com.newolf.animdemo", appContext.packageName)
     }
 }

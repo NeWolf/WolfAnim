@@ -4,7 +4,7 @@ buildscript {
 
     ext {
         configs = [kotlin_version   : kotlin_version,
-                   applicationId    : 'com.ewolf.wolfanimdemo',
+                   applicationId    : 'com.newolf.wolfanimdemo',
                    compileSdkVersion: 30,
                    buildToolsVersion: '30.0.3',
                    minSdkVersion    : 18,

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RotateImageView">
+        <attr name="rotate_duration" format="float"/>
+        <attr name="rotate_count" format="float"/>
+    </declare-styleable>
+
+</resources>

@@ -1,6 +1,7 @@
-package com.ewolf.wolfanim
+package com.newolf
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
@@ -20,6 +21,7 @@ import androidx.lifecycle.OnLifecycleEvent
  * @author NeWolf
  * @since 2021-06-21
  */
+@SuppressLint("AppCompatCustomView")
 class RotateImageView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,

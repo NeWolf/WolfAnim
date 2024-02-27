@@ -1,4 +1,4 @@
-package com.ewolf.wolfanim
+package com.newolf.anim
 
 import org.junit.Test
 

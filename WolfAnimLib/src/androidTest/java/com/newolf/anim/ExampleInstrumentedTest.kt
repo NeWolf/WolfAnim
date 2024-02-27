@@ -1,4 +1,4 @@
-package com.ewolf.wolfanim
+package com.newolf.anim
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

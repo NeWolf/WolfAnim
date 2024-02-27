@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ewolf.wolfanimdemo">
+    package="com.newolf.animdemo">
 
     <application
         android:name="com.newolf.animdemo.App"
@@ -13,7 +13,7 @@
         <activity
             android:name="com.newolf.animdemo.DurationActivity"
             android:exported="true" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.newolf.animdemo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

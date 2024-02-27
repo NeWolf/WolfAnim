@@ -1,7 +1,7 @@
 package com.ewolf.wolfanimdemo
 
 import androidx.lifecycle.LifecycleOwner
-import com.ewolf.wolfanim.RotateImageView
+import com.newolf.RotateImageView
 import com.newolf.animdemo.Navigater
 import com.newolf.animdemo.ScreenUtils
 import com.newolf.library.adapt.base.BaseQuickAdapter

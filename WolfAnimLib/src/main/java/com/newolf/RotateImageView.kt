@@ -4,7 +4,6 @@ import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
-import android.os.Build.VERSION_CODES.R
 import android.util.AttributeSet
 import android.util.Log
 import android.view.animation.LinearInterpolator

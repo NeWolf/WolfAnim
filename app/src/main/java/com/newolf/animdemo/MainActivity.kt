@@ -1,4 +1,4 @@
-package com.ewolf.wolfanimdemo
+package com.newolf.animdemo
 
 import android.os.Bundle
 import android.view.View

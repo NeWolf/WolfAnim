@@ -1,9 +1,7 @@
-package com.ewolf.wolfanimdemo
+package com.newolf.animdemo
 
 import androidx.lifecycle.LifecycleOwner
 import com.newolf.RotateImageView
-import com.newolf.animdemo.Navigater
-import com.newolf.animdemo.ScreenUtils
 import com.newolf.library.adapt.base.BaseQuickAdapter
 import com.newolf.library.adapt.base.viewholder.BaseViewHolder
 
@@ -15,7 +13,7 @@ import com.newolf.library.adapt.base.viewholder.BaseViewHolder
  * @since 2021-06-22
  */
 
-class NineAdapter(val lifecycleOwner: LifecycleOwner, data: MutableList<String>?) :
+class NineAdapter(private val lifecycleOwner: LifecycleOwner, data: MutableList<String>?) :
     BaseQuickAdapter<String, BaseViewHolder>(R.layout.adapter_nine, data) {
 
     var itemWidth = 0

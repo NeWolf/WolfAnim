@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatSeekBar
-import com.ewolf.wolfanimdemo.R
 import com.newolf.RotateImageView
 
 class DurationActivity : AppCompatActivity() {

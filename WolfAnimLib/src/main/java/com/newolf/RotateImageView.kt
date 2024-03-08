@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
+import android.os.Build.VERSION_CODES.R
 import android.util.AttributeSet
 import android.util.Log
 import android.view.animation.LinearInterpolator
@@ -34,7 +35,7 @@ class RotateImageView @JvmOverloads constructor(
         const val TAG = "RotateImageView"
         const val PROPERTY_NAME_ROTATE = "rotation"
         var sDuration: Long = 1000L
-        var sRotate: Float = 81F
+        var sRotate: Float = 9F
         const val REPEAT_COUNT = Int.MAX_VALUE - 1
     }
 
